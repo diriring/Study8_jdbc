@@ -4,10 +4,10 @@ public class LocationDTO {
 	
 	private Integer location_id;
 	private String street_address;
-	private Integer postal_code;
+	private String postal_code;
 	private String city;
 	private String state_province;
-	private Integer country_id;
+	private String country_id;
 	
 	public Integer getLocation_id() {
 		return location_id;
@@ -21,10 +21,10 @@ public class LocationDTO {
 	public void setStreet_address(String street_address) {
 		this.street_address = street_address;
 	}
-	public Integer getPostal_code() {
+	public String getPostal_code() {
 		return postal_code;
 	}
-	public void setPostal_code(Integer postal_code) {
+	public void setPostal_code(String postal_code) {
 		this.postal_code = postal_code;
 	}
 	public String getCity() {
@@ -39,10 +39,10 @@ public class LocationDTO {
 	public void setState_province(String state_province) {
 		this.state_province = state_province;
 	}
-	public Integer getCountry_id() {
+	public String getCountry_id() {
 		return country_id;
 	}
-	public void setCountry_id(Integer country_id) {
+	public void setCountry_id(String country_id) {
 		this.country_id = country_id;
 	}
 
