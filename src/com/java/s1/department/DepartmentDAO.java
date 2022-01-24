@@ -28,7 +28,9 @@ public class DepartmentDAO {
 				+ "    ON (D.DEPARTMENT_ID = E.DEPARTMENT_ID) ";
 		PreparedStatement st = con.prepareStatement(sql);
 		ResultSet rs = st.executeQuery();
-		
+		while(rs.next()) {
+			
+		}
 		
 	}
 	//부서 번호로 조회하는 메서드
