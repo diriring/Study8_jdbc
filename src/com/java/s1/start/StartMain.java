@@ -3,6 +3,7 @@ package com.java.s1.start;
 import java.util.List;
 import java.util.Locale;
 
+import com.java.s1.department.DepartmentController;
 import com.java.s1.department.DepartmentDAO;
 import com.java.s1.department.DepartmentDTO;
 import com.java.s1.department.DepartmentView;
@@ -16,27 +17,39 @@ public class StartMain {
 	public static void main(String[] args) {
 		System.out.println("DB 연동 테스트 시작");
 		
-//		DepartmentDAO departmentDAO = new DepartmentDAO();
-//		DepartmentView departmentView = new DepartmentView();
-//		
-//		try {
-//			List<DepartmentDTO> arr = departmentDAO.getList();
-//			departmentView.view(arr);
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		DepartmentDAO departmentDAO = new DepartmentDAO();
+		DepartmentView departmentView = new DepartmentView();
+		DepartmentController departmentController = new DepartmentController();
 		
-		LocationDAO locationDAO = new LocationDAO();
-		LocationView locationView = new LocationView();
+		FrontController frontController = new FrontController();
 		
 		try {
-			List<LocationDTO> arr = locationDAO.getList();
-			locationView.view(arr);
+//			DepartmentDTO departmentDTO = new DepartmentDTO();
+//			departmentDTO.setDepartment_id(20);
+//			departmentDTO = departmentDAO.getOne(departmentDTO);
+//			DepartmentDTO departmentDTO = departmentDAO.getOne(20);
+//			System.out.println(departmentDTO.getDepartment_name());
+//			List<DepartmentDTO> arr = departmentDAO.getList();
+//			departmentView.view(arr);
+			
+			frontController.mainStart();
+			
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+//		LocationDAO locationDAO = new LocationDAO();
+//		LocationView locationView = new LocationView();
+//		
+//		try {
+//			List<LocationDTO> arr = locationDAO.getList();
+//			locationView.view(arr);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 
 		System.out.println("DB 연동 테스트 끝");
