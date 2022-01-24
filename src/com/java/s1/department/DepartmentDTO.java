@@ -1,11 +1,17 @@
 package com.java.s1.department;
 
+import java.util.List;
+
+import com.java.s1.employee.EmployeeDTO;
+
 public class DepartmentDTO {
 	
 	private Integer department_id; //null이 들어올 수도 있기 때문에 Integer를 써준다
 	private String department_name;
 	private Integer manager_id;
 	private Integer location_id;
+	//부서는 EmployeeDTO 멤버변수가 있어야 함 >> Department has employees
+	
 	public Integer getDepartment_id() {
 		return department_id;
 	}

@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.naming.spi.DirStateFactory.Result;
+
 import com.java.s1.util.DBConnector;
 
 public class DepartmentDAO {
@@ -15,6 +17,20 @@ public class DepartmentDAO {
 		dbConnector = new DBConnector();
 	}
 	
+	//부서정보, 부서에 근무하는 사원들의 정보
+	public void getDEP_EMPList() throws Exception {
+		
+		Connection con = dbConnector.getConnect();
+		String sql = "SELECT D.*, E.* "
+				+ "FROM DEPARTMENTS D "
+				+ "    INNER JOIN "
+				+ "    EMPLOYEES E "
+				+ "    ON (D.DEPARTMENT_ID = E.DEPARTMENT_ID) ";
+		PreparedStatement st = con.prepareStatement(sql);
+		ResultSet rs = st.executeQuery();
+		
+		
+	}
 	//부서 번호로 조회하는 메서드
 	public DepartmentDTO getOne(DepartmentDTO dep) throws Exception {
 		DepartmentDTO departmentDTO = null;

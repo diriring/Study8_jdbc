@@ -2,6 +2,8 @@ package com.java.s1.employee;
 
 import java.sql.Date;
 
+import com.java.s1.department.DepartmentDTO;
+
 public class EmployeeDTO {
 	
 	private Integer employee_id;
@@ -15,6 +17,8 @@ public class EmployeeDTO {
 	private Double commission_pct;
 	private Integer manager_id;
 	private Integer department_id;
+	
+	private DepartmentDTO departmentDTO;
 	
 	public Integer getEmployee_id() {
 		return employee_id;
